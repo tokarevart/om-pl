@@ -1,7 +1,6 @@
 use om_pl::*;
 
 fn main() {
-    // x^2+x*ln(2+x^2) = x*(x+ln(1+(1+x^2)))
     let f = |x: f64| x * (x + (1.0 + x * x).ln_1p());
     let range = -10.0..10.0;
     let ltz = 30.0;
